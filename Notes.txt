@@ -1,0 +1,31 @@
+Adding Event Listeners
+
+
+We have button and we want to execute a function when the button got clicked, so how we do that?
+
+We add event listeners to the button and tell it what type of event we want to use and what to do when event got triggered basically executing a function.
+
+And we something like below,
+
+element(obj).addEventListener('click', name_of_function)
+
+
+
+Eg:
+
+handleClick() {
+    console.log('I got clicked');
+} // this will be the function that will be triggered when the click event has been identified
+button_obj = document.querySelector('button');
+button_obj.addEventListener('click', handleClick); 
+
+
+Note: we don't add parenthesis when we use function name in addEventListener method, instead of straight forward call we are using this function as input.
+
+
+
+Out in the wild, people use anonymous function
+
+button_obj.addEventListener('click', function() {
+    console.log('I got clicked');
+});
