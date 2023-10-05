@@ -29,3 +29,29 @@ Out in the wild, people use anonymous function
 button_obj.addEventListener('click', function() {
     console.log('I got clicked');
 });
+
+
+# Higher Order Functions: Passing Functions as Input
+
+We have passed function name without parenthesis inside the addEventListener Function and that is what is exactly known as higher order function.
+
+> Higher Order functions are the functions that take other functions as input
+
+Example;
+```
+function add(num1, num2) {
+   return num1 + num2;
+}
+
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+
+function calculator(num1,  num2, operator) {
+    return operator(num1, num2);
+}
+
+//Function call
+calculator(2, 3, add); --> 5
+calculator(4, 2, subtract); --> 2
+```
