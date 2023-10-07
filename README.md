@@ -69,7 +69,11 @@ audio.play();
 
 :index pointing up: Here we have created a audio object and then we used one of it's method name play()
 
+<<<<<<< HEAD
 **JavaScript +this**
+=======
+**JavaScript $${\color{yellow}this}$$**
+>>>>>>> 4b5d562 (Added backgroung images and audio)
 
 On adding eventListener to the button and then we console.log `this` we get whole element as output
 
