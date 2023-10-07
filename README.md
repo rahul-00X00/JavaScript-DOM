@@ -1,6 +1,6 @@
 # JavaScript-DOM
 
-# Everything about javascript and DOM
+## Everything about javascript and DOM
 
 ### Adding Event Listeners
 
@@ -32,7 +32,7 @@ button_obj.addEventListener('click', function() {
 });
 ```
 
-# Higher Order Functions: Passing Functions as Input
+### Higher Order Functions: Passing Functions as Input
 
 We have passed function name without parenthesis inside the addEventListener Function and that is what is exactly known as higher order function.
 
@@ -56,4 +56,28 @@ function calculator(num1,  num2, operator) {
 //Function call
 calculator(2, 3, add); --> 5
 calculator(4, 2, subtract); --> 2
+```
+
+### Adding Sound and dealing with JavaScript this keyword
+
+To add a sound we use Audio() class and then we create a object from it
+
+```
+var audio = new Audio('/path to audio file');
+audio.play();
+```
+
+:index pointing up: Here we have created a audio object and then we used one of it's method name play()
+
+**JavaScript +this**
+
+On adding eventListener to the button and then we console.log `this` we get whole element as output
+
+```
+<button>Click me</button>
+
+document.querySelector('button').addEventListener('click', function() {
+    console.log(this); // will print the button element
+    this.style.color = 'red'; // we can also manipulate the element using this
+})
 ```

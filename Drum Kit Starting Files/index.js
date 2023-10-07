@@ -13,6 +13,7 @@ const drumButtons = document.querySelectorAll('.drum');
 // Anonymous function used in addEventListener
 for (var i=0; i<drumButtons.length; i++) {
     drumButtons[i].addEventListener('click', function() {
-        alert('I got clicked');
+       var audio = new Audio('./sounds/crash.mp3');
+       audio.play();
     })
 }
