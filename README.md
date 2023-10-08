@@ -81,3 +81,57 @@ document.querySelector('button').addEventListener('click', function() {
     this.style.color = 'red'; // we can also manipulate the element using this
 })
 ```
+
+### JavaScript Object and Custructor Function
+
+#### JavaScript Object
+
+JavaScript object allows us to have a variable with properties and methods. Just think of it as real world objects
+for say **Humans** have properties like name, age and many more, Similarly we can create a object which can have many features and functionality
+
+Syntax for declaring an object
+
+```
+var object = {
+    property1: something...,
+    property2: something...
+}
+
+var student = {
+    name: 'Jack',
+    age: '15',
+    id: 23
+}
+```
+
+We can access the properties of object using dot(.) notation or using key
+For eg:
+student.name -> Jack
+student['age']
+
+#### JavaScript Constructor Function
+
+Let's suppose if we want to create records for 100 students then by using above declaration it would take long time. Since every students will have same properties so instead of declaring each properties again for every student we will create a constructor function which will behave as a blueprint for the student objects
+
+> Note: Initials should be capital while defining name of the constructor function
+
+Syntax for declaring constructor function
+
+```
+function StudentsRecord(name, age, yearOfJoining, courses) {
+    this.name = name, // we are using **this** for object
+    this.age = age,
+    this.yearsOfJoining = yearsOfJoining
+    this.courses = courses
+}
+
+Initializing an StudentsRecord Object
+var student1 = new StudentsRecord('Jack', 14, 2000, ['Maths', 'Physics', 'Chemistry']);
+var student2 = new StudentsRecord('Rose', 15, 1999, ['Maths', 'Economics', 'Statistics']);
+```
+
+> Here we use **new** for calling the constructor function
+
+We can access the properties each student similar to accessing objects
+student1.name;
+student2['age'];
