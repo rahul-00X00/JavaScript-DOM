@@ -135,3 +135,55 @@ var student2 = new StudentsRecord('Rose', 15, 1999, ['Maths', 'Economics', 'Stat
 We can access the properties each student similar to accessing objects
 student1.name;
 student2['age'];
+
+### JavaScript Switch
+
+JavaScript Switch statement is a control structure which is an alterante to if-else statements allows to check multiple cases values for an expression
+
+> For example day can have multiple values and based on the value we can console particular day using switch stament
+
+Syntax for switch statements
+
+```
+switch(expression) {
+    case value1:
+        console.log(value1);
+        break;
+    case value2:
+        console.log(value2);
+        break;
+    default:
+        console.log("nothing!);
+        break;
+}
+```
+
+Here an expression can have multiple cases and based on case check we execute code associated with the case
+
+> Note: switch and case keyword is used along with break keyword. case keyword uses (colon-:) instead of curly braces and each case have break keyword in order for halting further execution of codes. Along with this defualt case is passed if no cases match with the expression value
+
+Eg:
+
+```
+var day = 'Monday';
+switch(day) {
+    case 'Monday':
+        console.log('Boring Monday');
+        break;
+    case 'Tuesday':
+        console.log('Good day Tuesday');
+        break;
+    case 'Wednesday':
+        console.log('Get set Wednesday');
+        break;
+    case 'Thursday':
+        console.log('Burst Thursday');
+        break;
+    case 'Friday':
+        console.log('Happy Friday');
+        break;
+    default:
+        console.log('Enjoy Weekends');
+        break;
+}
+```
