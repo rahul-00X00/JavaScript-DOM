@@ -187,3 +187,51 @@ switch(day) {
         break;
 }
 ```
+
+### Methods Associated with Objects
+
+Objects can also have methods associated with which basically describes what functionality that particular object can do - behaviour of the object
+
+Syntax
+
+```
+var object = {
+    property1: '...',
+    property2: '...',
+    method : function () {
+        do something // this can be  a anonymous function or calling a function
+    }
+}
+
+Eg:
+
+var car = {
+    model: 'SUV',
+    color: 'Navy Blue',
+    openSunroof : function() {
+        // Open's sunroof
+    }
+}
+```
+
+Constructor function can also have methods associated with. All we have to do is assign function to the variable.
+
+Syntax
+
+```
+function NameOfConstructorFunction(property_value) {
+    this.property1 = property_value,
+    this.method = function() {
+        <!-- do something -->
+    }
+}
+
+Eg:
+function Car() {
+    this.run = function() {
+        //run...
+    }
+}
+
+No matter any numbers of object been made from it will have the functionality of run
+```
