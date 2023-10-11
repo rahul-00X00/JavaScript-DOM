@@ -10,11 +10,9 @@ const drumButtons = document.querySelectorAll('.drum');
 //     drumButtons[i].addEventListener('click', handleClick);
 // }
 
-// Anonymous function used in addEventListener
-for (var i=0; i<drumButtons.length; i++) {
-    drumButtons[i].addEventListener('click', function() {
-    //    Using Switch statements to add audio for different instruments
-    switch (this.innerHTML) {
+// Defining a function which will be called in both as a click event handler as well as during key press event handler
+function keyAudio(x) {
+    switch (x) {
         case 'w':
             var tom1 = new Audio('./sounds/tom-1.mp3');
             tom1.play();
@@ -47,5 +45,19 @@ for (var i=0; i<drumButtons.length; i++) {
             console.log("No instruments found");
             break;
     }
+}
+
+// Anonymous function used in addEventListener
+for (var i=0; i<drumButtons.length; i++) {
+    drumButtons[i].addEventListener('click', function() {
+    //    Using Switch statements to add audio for different instruments
+    keyAudio(this.innerHTML);
     })
 }
+
+// Adding key down eventlistener which will listen to the audio when a particular key is pressed
+// For keypress event we add eventlistener to the document
+
+document.addEventListener('keydown', function(event){
+    keyAudio(event.key);
+})

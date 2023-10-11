@@ -235,3 +235,30 @@ function Car() {
 
 No matter any numbers of object been made from it will have the functionality of run
 ```
+
+### Detecting keydown events
+
+Just as we added click event we can also add keydown events, but in click event we specified the target on which the click event has to be applied but for keydown we take entire `document` as the target
+
+Syntax: similar to click event
+
+```
+document.addEventListener('keydown', function() {
+    //do something
+})
+```
+
+The above code will work for any keys on the keyboard
+How to respond to particular keyboard character?
+
+> Well during the function call we pass an parameter called `event` which is an object passed by the browser when that particular event is triggered. This event has many properties and methods, but one we are interested is `key` property which basically which character was pressed from the keyboard
+
+Syntax
+
+```
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'a') {
+        console.log("character 'a' was clicked from the keyboard!");
+    }
+})
+```
