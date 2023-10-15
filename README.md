@@ -262,3 +262,17 @@ document.addEventListener('keydown', function(event) {
     }
 })
 ```
+
+### JavaScript Callback functions
+
+When a function is passed to another function as an argument or input then that function is known as `*Higher Order Function*` and function which is passed to the higher order function is known as `*Callback function*`
+
+```
+functionA(functionB) {
+    // do something with functionB
+    functionB()
+}
+
+// functionA -> Higher Order Function
+// functionB -> Call back function
+```
