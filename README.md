@@ -276,3 +276,17 @@ functionA(functionB) {
 // functionA -> Higher Order Function
 // functionB -> Call back function
 ```
+
+### Javascript setTimeout function
+
+setTimout() function allows us execute a function after a particular interval of time
+params:
+function or handle: function which has to be executed after a particular interval of time
+time(millisecond): specified time after the above handler should be called
+
+```
+setTimeout(function(){
+    console.log("Hello World");
+}, 1000);
+// The above setTimeout function will console log 'Hello World' after 1 sec
+```

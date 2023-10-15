@@ -52,6 +52,7 @@ for (var i=0; i<drumButtons.length; i++) {
     drumButtons[i].addEventListener('click', function() {
     //    Using Switch statements to add audio for different instruments
     keyAudio(this.innerHTML);
+    buttonAnimation(this.innerHTML);
     })
 }
 
@@ -60,4 +61,15 @@ for (var i=0; i<drumButtons.length; i++) {
 
 document.addEventListener('keydown', function(event){
     keyAudio(event.key);
+    buttonAnimation(event.key);
 })
+
+// Adding animation when button is clicked
+function buttonAnimation(key) {
+    active_button = document.querySelector("." + key);
+    active_button.classList.add('pressed');
+
+    setTimeout(function(){
+        active_button.classList.remove('pressed');
+    }, 100);
+}
